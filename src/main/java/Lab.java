@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,7 +22,7 @@ public class Lab {
      *
      * Second, the <Integer> portion represents a Generic. Generics allow an object to contain any object of a certain
      * type, so we can create a List that contains Integers, Strings, or even other Lists. Why do we use Integer and
-     * not int? Generics can only contain Objects, and not primitives, so we Integer because it is a Wrapper class,
+     * not int? Generics can only contain Objects, and not primitives, so we use Integer because it is a Wrapper class,
      * the Object form of a primitive.
      *
      * A popular implementation of List is ArrayList. Look up how to instantiate one.
@@ -29,7 +30,8 @@ public class Lab {
      * @return a List<Integer> object.
      */
     public List<Integer> createList(){
-        return null;
+        List<Integer> list = new ArrayList<Integer>();
+        return list;
     }
 
     /**
@@ -39,7 +41,8 @@ public class Lab {
      * @return the size of List (number of items it holds.)
      */
     public int getSize(List<Integer> list){
-        return 0;
+        int listSize = list.size();
+        return listSize;
     }
 
     /**
@@ -51,6 +54,7 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addToList(List<Integer> list, int value){
+        list.add(value);
     }
 
     /**
@@ -66,7 +70,8 @@ public class Lab {
      * @return the int at the location in 'list' represented by 'index'.
      */
     public int get(List<Integer> list, int index){
-        return 0;
+        int element = list.get(index);
+        return element;
     }
 
     /**
@@ -79,7 +84,7 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeFromList(List<Integer> list, int position){
-
+        list.remove(position);
     }
 
     /**
@@ -92,5 +97,6 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void updateAtPosition(List<Integer> list, int position, int value){
+        list.set(position, value);
     }
 }
